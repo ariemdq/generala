@@ -1,0 +1,191 @@
+body{
+    background: linear-gradient(45deg, #d6bfbf, #eea2a2, #d6bfbf, #eea2a2 ); 
+    background-size: 400% 400%;
+    animation: change 10s ease-in-out infinite;
+}
+.score{
+    width: 25px;
+    height: 25px;    
+}
+/* fondo del navbar */
+.navbar{
+    background: linear-gradient(-45deg, #eea2a2, #d6bfbf,#eea2a2, #d6bfbf ); 
+    animation: change 2s ease-in-out;
+}
+.navbar-light .navbar-brand {
+    color: #910024 !important;
+    font-weight: bold;
+}
+.dot{
+    list-style-type:none;
+    /* width: 100%; */
+    padding: 0;
+    transform: rotate(270deg); /* girar el ul li */
+    width: 50%;
+    height: 50%;
+    margin-top: -10px;
+    margin-left: 80px;
+    margin-right: auto;
+}
+
+/* animacion body bakground */
+@keyframes change {
+    0%{
+    background-position: 0 50%;
+    }
+    50%{
+    background-position: 100% 50%;
+    }
+    100%{
+    background-position: 0 50%;
+    }
+}
+
+/*animacion 3d*/
+
+.container1 {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: left;
+    perspective: 500px;
+    perspective-origin: top left;
+    position: absolute;
+}
+.cubo{ 
+    position: initial;
+    width: 60px;
+    height: 60px;
+    transform-style: preserve-3d;
+    animation: cubeRotate 10s ease-in-out infinite;
+
+}
+
+img { 
+    width: 30px;
+    height: 30px;
+}
+
+.lado{ 
+    position: fixed;
+}
+
+.uno {
+    transform: translateZ(15px);
+  }
+
+.seis {
+    transform: translateZ(-15px);
+  }  
+
+.cinco {
+    transform: rotateY(90deg) translateZ(15px);
+  }
+  
+.dos {
+    transform: rotateY(-90deg) translateZ(15px);
+}  
+
+.tres {
+    transform: rotateX(90deg) translateZ(15px);
+}
+   
+.cuatro {
+    transform: rotateX(-90deg) translateZ(15px);
+}  
+
+@keyframes cubeRotate {
+    from { transform: rotateY(0deg) rotateX(720deg) rotateZ(0deg); }
+    to { transform: rotateY(360deg) rotateX(0deg) rotateZ(360deg); }
+  }
+
+/*animacin del titulo*/
+.titulo{
+    position: relative;
+    animation: myfirst 5s ease-in-out;
+    padding: 0px;
+}
+
+@keyframes myfirst {
+0%      {left: 40%; top: 0px; opacity: 0;}
+100%    {left: 0px; top: 0px; opacity: 0.9;}
+}
+
+/*  .btn uses !important to make sure it works with Bootstrap to override its styles, we need the same here too:*/
+.btn{
+    background-color : #e4e4e4 !important;
+    color: #910024;
+    font-weight: bold;
+    border-color: #910024;
+}
+
+.btn:hover{
+    background-color:  #c9c9c9 !important;
+    color: #910024 !important;
+    border: 1px solid #910024;
+} 
+
+.myButton{
+    width: 150px;
+    flex-grow: 1;
+
+}
+
+.myHidden{
+    display: none;
+}
+
+
+.imputBox{
+    background-color: transparent;
+}
+
+.textBox{
+    background-color: transparent;
+}
+
+.card{
+    background-color: transparent;
+
+}
+
+.dado{
+    height: 40px;
+    width: 40px;
+}
+
+#jugada{
+    color: #073f1c
+}
+
+#jugada:hover{
+    color: #073f1c !important;
+    border: 1px solid #910024;
+}
+
+#noBoton{
+    cursor: none;
+}
+
+#noBoton:hover{
+    background-color:   #e4e4e4 !important;
+    border: 1px solid #910024;
+}
+
+.counter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px 1em 0;
+    border-radius: 4px;
+    width: 120px;
+    height: 38px;
+    border: 1px solid #910024;
+    color: #910024;
+    font-weight: bold;
+    background-color : #e4e4e4
+}
+
+  
+
+

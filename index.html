@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generala</title>
+    <script src="js/dados.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+
+
+</head>
+<body>
+  <div>
+    <nav class="sticky-top navbar navbar-light bg-light"><span class="navbar-brand titulo">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGenerala</span>
+            <span class="container1">
+              <span class="d-inline-block align-top cubo">
+                  <span class="lado uno"><img src="assets/1.png"></span>
+                  <span class="lado dos"><img src="assets/2.png"></span>
+                  <span class="lado tres"><img src="assets/3.png"></span>
+                  <span class="lado cuatro"><img src="assets/4.png"></span>
+                  <span class="lado cinco"><img src="assets/5.png"></span>
+                  <span class="lado seis"><img src="assets/6.png"></span>                                
+                  </span>
+              </span>
+      </nav>
+      <br>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm">
+        <button class="btn btn-primary myButton" id="reset" type="button" onClick="reset()">Reset</button>  
+        <button class="btn btn-primary myButton" id="jugada" type="button" onClick="generala()">Jugada</button> 
+        
+        <br>
+        <br>
+        <ul class="dot">
+          <li class="input-group-text imputBox">
+            <input type="checkbox" class="col-4">
+            <img src="assets/1.png" class="d-inline-block align-top dado" alt="">
+          </li>
+          <li class="input-group-text imputBox">
+            <input type="checkbox" class="col-4">
+            <img src="assets/2.png" class="d-inline-block align-top dado" alt="">
+          </li>
+          <li class="input-group-text imputBox">
+            <input type="checkbox" class="col-4">
+            <img src="assets/3.png" class="d-inline-block align-top dado" alt="">
+          </li>
+          <li class="input-group-text imputBox">
+            <input type="checkbox" class="col-4">
+            <img src="assets/4.png" class="d-inline-block align-top dado" alt="">
+          </li>
+          <li class="input-group-text imputBox">
+            <input type="checkbox" class="col-4">
+            <img src="assets/5.png" class="d-inline-block align-top dado" alt="">
+          </li>
+        </ul>
+        <span class="counter" id="turno">Turno #</span><span  class="counter" id="lanzamiento">Jugada #</span>
+      </div>
+      <div class="col-sm-1">
+      </div>
+      <div class="col-sm-4">
+          <span class="btn" id="noBoton">Puntaje</span>
+              <br>
+              <br>
+              <table class="table table-hover table-sm">
+                  <thead>
+                    <tr>
+                      <th scope="col">Seleccion</th>
+                      <th scope="col">Juego</th>
+                      <th scope="col">Maximo</th>
+                      <th scope="col">Puntos</th>
+                      <th scope="col"></th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <button class="score " onClick=marcarScore(0)></button>
+                      </th>
+                      <th scope="row">Generala</th>
+                      <td>50</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <button class="score" onClick=marcarScore(1)></button>
+                      </th>
+                      <th scope="row">Escalera</th>
+                      <td>45</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <button class="score" onClick=marcarScore(2)></button>
+                      </th>
+                      <th scope="row">Poker</th>
+                      <td>35</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <button class="score" onClick=marcarScore(3)></button>
+                      </th>
+                      <th scope="row">Full</th>
+                      <td>25</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>                              
+                    <tr>
+                      <th scope="row">
+                        <button class="score" onClick=marcarScore(4)></button>
+                        </th>
+                      <th scope="row">6</th>
+                      <td>30</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>                              
+                    <tr>
+                      <th scope="row">
+                        <button class="score" onClick=marcarScore(5)></button>
+                      </th>                        
+                      <th scope="row">5</th>
+                      <td>25</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>                              
+                    <tr>
+                      <th scope="row">
+                        <button class="score" onClick=marcarScore(6)></button>
+                      </th>
+                      <th scope="row">4</th>
+                      <td>20</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>                              
+                    <tr>
+                      <th scope="row">
+                        <button class="score" onClick=marcarScore(7)></button>
+                      </th>
+                      <th scope="row">3</th>
+                      <td>15</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>                              
+                    <tr>
+                      <th scope="row">
+                        <button class="score" onClick=marcarScore(8)></button>
+                      </th>
+                      <th scope="row">2</th>
+                      <td>10</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>      
+                    <tr>
+                      <th scope="row">
+                        <button class="score" onClick=marcarScore(9)></button>
+                      </th>
+                      <th scope="row">1</th>
+                      <td>5</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+                
+      </div>
+      <div class="col-sm-1">
+      </div>
+      <div class="col-sm-3">
+          <p>
+              <span class="btn" id="noBoton">Reglas de Juego<span>
+              </p>
+            <div class="row">
+              <div class="col">
+                  <div class="card card-body textBox">
+                      Se juega entre 3 a 5 jugadores. Un jugador tira los dados y trata de formar diferentes
+                      combinaciones con ellos. Tiene tres tiros para formar su "jugada" y entre estos tiros puede mantener
+                      en mesa cualquier cantidad de dados.                                
+                  </div>
+                  <div id="accordion">
+                      <div class="card">
+                        <div class="card-header" id="headingOne">
+                          <h5 class="mb-0">
+                            <button class="btn btn-primary" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              Turnos
+                            </button>
+                          </h5>
+                        </div>
+                    
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                          <div class="card-body textBox">
+                              La forma de pasar el turno es circular, hace una jugada (3 tiros) cada participante por ronda.
+                              El juego consiste de 11 rondas, hasta que todos completen la puntuación de todos los tiros, del 1
+                              al 6 y los juegos (Escalera, Full, Póker, Generala y Doble Generala). 
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="headingTwo">
+                          <h5 class="mb-0">
+                            <button class="btn btn-primary collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              Jugada
+                            </button>
+                          </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                          <div class="card-body textBox">
+                              Cuando sea su turno, cada participante podrá tirar hasta 3 veces.
+                              Entre cada tiro podrá elegir qué dados deja en la mesa (según el juego que quiera formar) y
+                              volver a tirar el resto de dados.
+                              El participante puede decidir cuando terminar la jugada, si ya consiguió el juego que estaba
+                              buscando.
+                              Cuando termine el turno, se podrá elegir entre las varias posibilidades que existan de puntuar.
+                              1. Escoger en base a los dados obtenidos la puntuación más conveniente. Siempre y cuando no
+                              se haya asignado puntuación previamente al juego elegido, es decir cada tiro puntúa sólo 1
+                              vez.
+                              2. Tachar (obtener 0 puntos) un tiro. 
+                              Si en una jugada no se consigue ninguno de los juegos citados en el apartado anterior, o si ya se
+                              había asignado puntuación al juego obtenido, se puede asignar puntuación a tiros del 1 al 6
+                              (nuevamente, si ya no había sido asignada previamente).
+                              El correspondiente puntaje se calculará según el número de dado en cuestión multiplicado por la
+                              cantidad de dados obtenidos de dicho número.
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+              </div>
+              
+            </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+<!----------------------------------------------------------------          
+<footer class="py-3 mt-auto bg-light">
+  <div class="container">
+    <span class="text-muted">
+      kf;aksjf;askjdf;lks
+    </span>
+  </div>
+</footer>
